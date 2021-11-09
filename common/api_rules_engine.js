@@ -1,6 +1,6 @@
 var env = process.env.NODE_ENV == undefined ? "local" : process.env.NODE_ENV;
 var string = require("string");
-const error_mapper = require("../enum/response_mapper");
+const error_mapper = require("../enum/response_code");
 const rules = require("../config/api-rules.json");
 const regex_match = require("./regex_match");
 

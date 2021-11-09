@@ -1,7 +1,7 @@
 var http = require("http");
 const config = require("../common/env_config.js");
 const queryString = require("query-string");
-const error_mapper = require("../enum/response_mapper.js");
+const error_mapper = require("../enum/response_code.js");
 module.exports = {
   request: async (method, postfix_url, service, body, content_type) => {
     let options = module.exports.options_concrete(
