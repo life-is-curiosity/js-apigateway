@@ -16,6 +16,7 @@ module.exports = {
     let options = config.service_endpoints[service];
     options["path"] = postfix_url;
     options["method"] = method;
+    options["timeout"] = config.service_endpoints.timeout;
     headers = {};
     headers["Content-Type"] = content_type;
     options["headers"] = headers;
