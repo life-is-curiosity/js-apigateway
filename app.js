@@ -1,6 +1,3 @@
-/*
-	Include modules
-*/
 const koa = require("koa");
 const ratelimit = require("koa-ratelimit");
 const redis = require("./common/redis");
