@@ -1,10 +1,10 @@
 const api_rules_engine = require("./api_rules_engine");
 
 module.exports = {
-  request: function (request) {
+  request: (request) => {
     return api_rules_engine(request);
   },
-  error: function (error) {
+  error: (error) => {
     return { code: error.id, message: error.message };
   },
 };

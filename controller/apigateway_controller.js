@@ -8,7 +8,7 @@ const redis = require("../common/redis");
 const http = require("../common/http");
 exports.portal = async (ctx) => {
   ctx.compress = true;
-  return new Promise(async function (resolve) {
+  return new Promise(async (resolve) => {
     let request = standard_api_format.request(ctx.request);
     let error = error_mapper.forbidden_to_the_service;
     if (request.code === 0) {
