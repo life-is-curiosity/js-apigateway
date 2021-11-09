@@ -13,10 +13,11 @@ module.exports = {
     return await module.exports.http_request(options, body);
   },
   options_concrete: (method, postfix_url, service, content_type) => {
-    let options = config.service_endpoints[service];
+    let endpoints = config.service_endpoints;
+    let options = endpoints[service];
     options["path"] = postfix_url;
     options["method"] = method;
-    options["timeout"] = config.service_endpoints.timeout;
+    options["timeout"] = endpoints.timeout;
     headers = {};
     headers["Content-Type"] = content_type;
     options["headers"] = headers;

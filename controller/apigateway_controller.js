@@ -3,6 +3,7 @@ const standard_api_format = require("../common/standard_api_format");
 const rules = require("../config/api-rules.json");
 const string = require("string");
 const error_mapper = require("../enum/response_mapper");
+const token_enum = require("../enum/token_enum");
 const redis = require("../common/redis");
 const http = require("../common/http");
 exports.portal = async (ctx) => {
@@ -19,7 +20,7 @@ exports.portal = async (ctx) => {
         if (token === undefined || string(token).isEmpty()) {
           ctx.body = standard_api_format.error(error);
         } else {
-          token = await redis.get("token-" + token);
+          token = await redis.get(token_enum.token + token);
           if (token === undefined) {
             ctx.body = standard_api_format.error(error);
           }
