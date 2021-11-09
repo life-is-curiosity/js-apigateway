@@ -20,5 +20,5 @@ module.exports = {
   request_invalid_event: { id: 10004, message: "Invalid event" },
   request_invalid_version: { id: 10005, message: "Invalid version" },
   request_invalid_data: { id: 10006, message: "Invalid data" },
-  network_error: { id: 10007, message: "Network rror" },
+  network_error: { id: 10007, message: "Network error" },
 };
