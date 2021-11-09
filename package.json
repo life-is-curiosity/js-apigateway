@@ -1,0 +1,82 @@
+{
+  "name": "koa",
+  "version": "0.0.1",
+  "description": "apigateywa-service",
+  "main": "app.js",
+  "author": "Alan Wong",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "cheerio": "^1.0.0-rc.2",
+    "fast-json-stringify": "^1.11.3",
+    "ioredis": "^4.0.2",
+    "js-base64": "^2.5.1",
+    "jshint": "^2.9.6",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compress": "^3.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-handle-error": "^0.0.5",
+    "koa-helmet": "^4.0.0",
+    "koa-json-error": "^3.1.2",
+    "koa-logger": "^3.0.0",
+    "koa-ratelimit": "^5.0.1",
+    "koa-render": "^0.1.1",
+    "koa-res": "^1.3.0",
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6",
+    "line-reader": "^0.4.0",
+    "node-fetch": "^2.2.0",
+    "pm2": "^5.1.2",
+    "query-string": "^7.0.1",
+    "redis": "^3.1.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "socket.io": "^2.1.1",
+    "string": "^3.3.3",
+    "yarn": "^1.9.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{ts,js}",
+      "!**/node_modules/**",
+      "!**/build/**",
+      "!**/coverage/**"
+    ],
+    "transform": {
+      "\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/coverage/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^3.1.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "redis": {
+    "host": "localhost",
+    "port": 6379,
+    "auth": "",
+    "db": 0,
+    "max_clients": 30,
+    "tls": false
+  },
+  "rate_limit": {
+    "interval_ms": "60000",
+    "max_requests": "120"
+  },
+  "endpoints": {
+    "portal": "/gateway/portal"
+  },
+  "service_endpoints": {
+    "user": {
+      "hostname": "localhost",
+      "port": 3001
+    }
+  }
+}

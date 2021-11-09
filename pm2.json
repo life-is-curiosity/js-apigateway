@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "apigateway",
+      "script": "./app.js",
+      "merge_logs": true,
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "watch": true,
+      "env": {
+        "PORT": 3000,
+        "SERVICE_MODE": "local",
+        "NODE_ENV": "local"
+      },
+      "env_dev": {
+        "PORT": 3005,
+        "SERVICE_MODE": "production",
+        "NODE_ENV": "production"
+      },
+      "env_uat": {
+        "PORT": 3005,
+        "SERVICE_MODE": "uat",
+        "NODE_ENV": "uat"
+      },
+      "instances": 1,
+      "exec_mode": "cluster"
+    }
+  ]
+}

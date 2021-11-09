@@ -1,0 +1,33 @@
+{
+  "user": {
+    "login": {
+      "url": "/account/login",
+      "credential": true,
+      "method": "POST",
+      "content_type": "application/json",
+      "parameters": {
+        "email": {
+          "max_length": 100,
+          "numeric": false,
+          "mandatory": true,
+          "can_empty": false,
+          "regex": "email"
+        },
+        "password": {
+          "max_length": 100,
+          "numeric": false,
+          "mandatory": true,
+          "can_empty": false,
+          "regex": "password"
+        }
+      }
+    },
+    "profile": {
+      "url": "/account/profile",
+      "credential": false,
+      "method": "GET",
+      "content_type": "application/x-www-form-urlencoded",
+      "parameters": {}
+    }
+  }
+}
