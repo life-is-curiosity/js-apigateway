@@ -2,7 +2,7 @@
   "user": {
     "login": {
       "url": "/account/login",
-      "credential": true,
+      "credential": false,
       "method": "POST",
       "content_type": "application/json",
       "parameters": {
