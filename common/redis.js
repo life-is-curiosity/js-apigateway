@@ -22,4 +22,10 @@ module.exports = {
     }
     return value;
   },
+  del: (key) => {
+    module.exports.connect().del(key);
+  },
+  set: (key, value) => {
+    module.exports.connect().set(key, value, "ex", config.session.expire);
+  },
 };

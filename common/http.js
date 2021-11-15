@@ -3,16 +3,24 @@ const config = require("../common/env_config.js");
 const queryString = require("query-string");
 const error_mapper = require("../enum/response_code.js");
 module.exports = {
-  request: async (method, postfix_url, service, body, content_type) => {
+  request: async (
+    method,
+    postfix_url,
+    service,
+    body,
+    content_type,
+    user_id
+  ) => {
     let options = module.exports.options_concrete(
       method,
       postfix_url,
       service,
-      content_type
+      content_type,
+      user_id
     );
     return await module.exports.http_request(options, body);
   },
-  options_concrete: (method, postfix_url, service, content_type) => {
+  options_concrete: (method, postfix_url, service, content_type, user_id) => {
     let endpoints = config.service_endpoints;
     let options = endpoints[service];
     options["path"] = postfix_url;
@@ -20,6 +28,9 @@ module.exports = {
     options["timeout"] = endpoints.timeout;
     headers = {};
     headers["Content-Type"] = content_type;
+    if (user_id != undefined) {
+      headers["user_id"] = user_id;
+    }
     options["headers"] = headers;
     return options;
   },

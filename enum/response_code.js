@@ -9,7 +9,7 @@ module.exports = {
   },
   forbidden_to_the_service: {
     id: 99999,
-    message: "Invalid credential for the service",
+    message: "Invalid credential to the service",
   },
   over_rate_limit: {
     id: 99998,

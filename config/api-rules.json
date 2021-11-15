@@ -24,7 +24,7 @@
     },
     "profile": {
       "url": "/account/profile",
-      "credential": false,
+      "credential": true,
       "method": "GET",
       "content_type": "application/x-www-form-urlencoded",
       "parameters": {}

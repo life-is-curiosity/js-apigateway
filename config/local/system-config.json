@@ -20,5 +20,9 @@
       "hostname": "localhost",
       "port": 3001
     }
+  },
+  "session": {
+    "algorithm": "RS256",
+    "expire": 180
   }
 }
