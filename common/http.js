@@ -1,7 +1,7 @@
 var http = require("http");
-const config = require("../common/env_config.js");
+const config = require("../common/env_config");
 const queryString = require("query-string");
-const error_mapper = require("../enum/response_code.js");
+const error_mapper = require("../enum/response_code");
 module.exports = {
   request: async (
     method,

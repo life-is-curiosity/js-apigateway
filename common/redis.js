@@ -1,5 +1,5 @@
 const Redis = require("ioredis");
-const config = require("./env_config.js");
+const config = require("./env_config");
 const string = require("string");
 var redis_connection;
 
