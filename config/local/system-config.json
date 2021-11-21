@@ -11,16 +11,13 @@
     "interval_ms": "60000",
     "max_requests": "120"
   },
-  "endpoints": {
-    "portal": "/gateway/portal"
-  },
   "service_endpoints": {
     "timeout": 5000,
     "user": [
       {
         "hostname": "localhost",
         "port": 3001,
-        "weight": 2
+        "weight": 10
       },
       {
         "hostname": "localhost",

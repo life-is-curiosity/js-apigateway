@@ -43,6 +43,6 @@ app.use(
   })
 );
 let router = new Router();
-router.post(config.endpoints.portal, apigateway_controller.portal);
+router.post("/", apigateway_controller.portal);
 app.use(router.routes()).use(router.allowedMethods());
 app.listen(process.env.PORT);
