@@ -1,7 +1,7 @@
 var http = require("http");
-const config = require("../common/env_config");
 const queryString = require("query-string");
 const error_mapper = require("../enum/response_code");
+const load_balance = require("../common/load_balance");
 module.exports = {
   request: async (
     method,
@@ -21,11 +21,9 @@ module.exports = {
     return await module.exports.http_request(options, body);
   },
   options_concrete: (method, postfix_url, service, content_type, user_id) => {
-    let endpoints = config.service_endpoints;
-    let options = endpoints[service];
+    let options = load_balance.get_service(service);
     options["path"] = postfix_url;
     options["method"] = method;
-    options["timeout"] = endpoints.timeout;
     headers = {};
     headers["Content-Type"] = content_type;
     if (user_id != undefined) {

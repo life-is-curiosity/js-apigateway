@@ -16,10 +16,28 @@
   },
   "service_endpoints": {
     "timeout": 5000,
-    "user": {
-      "hostname": "localhost",
-      "port": 3001
-    }
+    "user": [
+      {
+        "hostname": "localhost",
+        "port": 3001,
+        "weight": 2
+      },
+      {
+        "hostname": "localhost",
+        "port": 3002,
+        "weight": 2
+      },
+      {
+        "hostname": "localhost",
+        "port": 3003,
+        "weight": 2
+      },
+      {
+        "hostname": "localhost",
+        "port": 3004,
+        "weight": 4
+      }
+    ]
   },
   "session": {
     "algorithm": "RS256",

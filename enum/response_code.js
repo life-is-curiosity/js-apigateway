@@ -21,4 +21,5 @@ module.exports = {
   request_invalid_version: { id: 10005, message: "Invalid version" },
   request_invalid_data: { id: 10006, message: "Invalid data" },
   network_error: { id: 10007, message: "Network error" },
+  no_service_endpoint: { id: 10008, message: "No service endpoint" },
 };
