@@ -1,3 +1,4 @@
+![Screenshot](apigateway-components.png)
 ### 0. Features
 - API Rules Engine
 - Distributed Load-Balancing Algorithms
