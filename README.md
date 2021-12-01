@@ -1,3 +1,12 @@
+### 0. Features
+- API Rules Engine
+- Distributed Load-Balancing Algorithms
+- Support Microservices Architecture
+- Asymmetric JWT Double-Lock Session
+- Rate-Limit Components
+- Http API Proxy Gateway
+- Support Single Redis Instance
+
 ### 1. Environment Construction
 - node 10
 - yarn
@@ -8,13 +17,13 @@
 *  `npm install`
 
 
-## 3. Construct image
-### Dependency
+### 3. Construct image
+#### Dependency
 - docker environment
 - Directly user `pm2 start pm2.json --env local > /dev/null` in local dev environment
 - `pm2 kill` - kill all services
 
-### Write dockerfile
+#### Write dockerfile
 ````
 FROM keymetrics/pm2:10-alpine
 
@@ -25,10 +34,10 @@ ADD . /usr/src/app
 EXPOSE 3005
 CMD pm2-runtime start pm2.json --no-autorestart --env $ENV_NAME
 ````
-### Construct docker image
+#### Construct docker image
 `docker build -t apigateway-service:latest .` Construct the name - apigateway-service:latest as image
 
-### Run on Docker
+#### Run on Docker
 * Example： 
 ```
 
