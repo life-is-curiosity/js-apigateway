@@ -1,5 +1,4 @@
-![Screenshot](apigateway-components.PNG)
-![Screenshot](auth-login-sequence.png)
+# API Gateway on NodeJS
 ### 0. Features
 - API Rules Engine
 - Distributed Load-Balancing Algorithms
@@ -8,6 +7,8 @@
 - Rate-Limit Components
 - Http API Proxy Gateway
 - Support Single Redis Instance
+![Screenshot](./imgs/apigateway-components.PNG)
+![Screenshot](./imgs/auth-login-sequence.png)
 
 ### 1. Environment Construction
 - node 10
